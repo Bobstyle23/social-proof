@@ -1,0 +1,147 @@
+:root {
+  --white: #fff;
+  --purple-900: #512051;
+  --purple-300: #927b91;
+  --purple-100: #f7f2f7;
+  --pink: #ee69a4;
+  --orange: #ef9546;
+  --gradient: linear-gradient(
+      to bottom right,
+      #512051 0%,
+      #8a4389 10%,
+      #ffffff 100%
+    )
+    no-repeat;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 75ch;
+}
+
+.container {
+  max-width: 111rem;
+  margin-block: 8rem;
+  margin-inline: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  text-align: center;
+  justify-items: center;
+}
+
+.info__heading {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.2rem;
+  text-wrap: balance;
+  color: var(--purple-900);
+}
+
+.info__description {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.06rem;
+  color: var(--purple-300);
+  max-width: 44.5rem;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  justify-items: center;
+}
+
+.reviews__box {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.8rem;
+  background-color: var(--purple-100);
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.reviews__stars {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.8rem;
+}
+
+.reviews__text {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--purple-900);
+}
+
+@media (min-width: 48em) {
+  .container {
+    margin-block: 11.8rem;
+    margin-inline: 8rem;
+  }
+
+  .main {
+    gap: 4rem;
+  }
+
+  .info__heading {
+    font-size: 5.6rem;
+  }
+
+  .reviews__box {
+    flex-flow: row nowrap;
+    gap: 3.2rem;
+    padding: 1.6rem 3.2rem;
+    min-height: auto;
+    justify-content: normal;
+    max-width: 45.3rem;
+  }
+}
