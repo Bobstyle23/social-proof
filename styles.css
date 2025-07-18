@@ -140,8 +140,46 @@ p {
     flex-flow: row nowrap;
     gap: 3.2rem;
     padding: 1.6rem 3.2rem;
-    min-height: auto;
+    min-height: 4.9rem;
     justify-content: normal;
     max-width: 45.3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .container {
+    margin: 11.6rem 5.2rem;
+  }
+
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info {
+    text-align: left;
+    justify-items: flex-start;
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .info {
+    max-width: 44.5rem;
+  }
+
+  .reviews__box {
+    height: 4.9rem;
+    max-width: 44.6rem;
+  }
+
+  .reviews__box:nth-of-type(1) {
+    justify-self: start;
+  }
+
+  .reviews__box:nth-of-type(3) {
+    justify-self: end;
   }
 }
