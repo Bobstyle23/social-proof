@@ -103,10 +103,11 @@ p {
   gap: 1.6rem;
   align-items: center;
   justify-content: center;
-  min-height: 7.8rem;
+  /*min-height: 7.8rem;*/
   background-color: var(--purple-100);
   width: 100%;
   border-radius: 0.8rem;
+  padding-block: 1.5rem;
 }
 
 .reviews__stars {
@@ -120,6 +121,60 @@ p {
   font-weight: 700;
   line-height: 1;
   color: var(--purple-900);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.6rem;
+}
+
+.testimonial {
+  padding: 3.2rem;
+  background-color: var(--purple-900);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3.2rem;
+
+}
+
+.testimonial__author  {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  column-gap: 2.4rem;
+}
+
+.testimonial__author-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  grid-row: span 2;
+}
+
+
+.testimonial__author-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--white);
+  align-self: start;
+
+}
+
+
+.testimonial__author-position {
+  font-size: 1.7rem;
+  color: var(--pink);
+  grid-column: 2 / -1;
+
+}
+
+.testimonial__review {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.03rem;
+  color: var(--white);
 }
 
 @media (min-width: 48em) {
@@ -140,9 +195,18 @@ p {
     flex-flow: row nowrap;
     gap: 3.2rem;
     padding: 1.6rem 3.2rem;
-    min-height: 4.9rem;
     justify-content: normal;
     max-width: 45.3rem;
+  }
+
+
+  .testimonials {
+    justify-items: center;
+  }
+
+  .testimonial {
+    max-width: 45.3rem;
+
   }
 }
 
@@ -159,19 +223,30 @@ p {
     text-align: left;
     justify-items: flex-start;
   }
+
+  .testimonials {  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); column-gap: 2.4rem }
+
+  .testimonial {
+    max-width: 35rem;
+  }
 }
 
 @media (min-width: 75em) {
   .container {
     margin-inline: auto;
+    gap: 6.4rem;
   }
 
   .info {
     max-width: 44.5rem;
   }
 
+  .reviews {
+    align-content: center;
+
+  }
+
   .reviews__box {
-    height: 4.9rem;
     max-width: 44.6rem;
   }
 
@@ -182,4 +257,20 @@ p {
   .reviews__box:nth-of-type(3) {
     justify-self: end;
   }
+
+  .testimonials {
+    height: 25.6rem;
+    align-items: center;
+  }
+
+  .testimonial:nth-of-type(1) {
+    align-self: start;
+
+  }
+
+  .testimonial:nth-of-type(3) {
+    align-self: end;
+  }
+
+
 }
